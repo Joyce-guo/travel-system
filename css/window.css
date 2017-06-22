@@ -1,0 +1,112 @@
+@charset "utf-8";
+/*设置通用样式*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body {
+    overflow-y: hidden;
+}
+main,footer {
+    display: block;
+}
+main {
+    width: 100%;
+    height: 95%;
+    background: url("../img/bg/background1.png") no-repeat;
+    background-size: cover;
+}
+/*****桌面应用图标样式*****/
+.apps {
+    width: 100%;
+    height: 100%;
+    /*设置图标从上到下-从左到右排列*/
+    writing-mode: tb-lr;
+    -webkit-writing-mode: vertical-lr;
+}
+.apps .icon {
+    cursor: pointer;
+}
+.apps > a {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: 13px;
+    background: #fff;
+    box-shadow: 0 0 5px 2px #fff;
+    border-radius: 8px;
+    text-align: center;
+}
+.apps > a > img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+
+/*****桌面右键列表样式*****/
+ul.right-menu {
+    width: 220px;
+    height: 300px;
+    background: rgba(255,255,255,.7);
+    position: absolute;
+    border-radius: 8px;
+    padding: 8px;
+    display: none;
+    top: 300px;
+    right: 200px;
+}
+ul.right-menu > input {
+    display: none;
+}
+ul.right-menu > li {
+    list-style-type: none;
+    border-radius: 5px;
+    padding: 8px;
+    height: 45px;
+    line-height: 31px;
+}
+ul.right-menu > li:hover {
+    background: #b57c6c;
+}
+li > span{
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+li > span.big-icon {
+    background: url("../img/window/picture_32px.png") no-repeat;
+    background-size: 29px;
+    background-position: center center;
+}
+li > span.middle-icon {
+    background: url("../img/window/picture_24px.png") no-repeat;
+    background-size: 22px;
+    background-position: center center;
+}
+li > span.small-icon {
+    background: url("../img/window/picture_16px.png") no-repeat;
+    background-size: 16px;
+    background-position: center center;
+}
+footer {
+    width: 100%;
+    height: 5%;
+    background: rgba(0,0,0,.6);
+}
+
+footer > .time {
+    width: 100px;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    right: 10px;
+}
+

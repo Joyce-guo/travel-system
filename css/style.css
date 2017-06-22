@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+/*************************************************/
+/* 样式初始化部分 */
+/*************************************************/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body,main {
+    width: 100%;
+    height: 100%;
+}
+
+/*************************************************/
+/* 样式细节设置部分 */
+/*************************************************/
+/*设置背景*/
+main { 
+    display: block;
+    overflow: hidden;
+}
+main > .background {
+    width: 120%;
+    height: 120%;
+    content: url("../img/index/index.jpg");
+    -webkit-animation: float linear 12s infinite;
+    animation: float linear 12s infinite;
+}
+
+/*设置登录框位置*/
+main > .login-box {
+    width: 400px;
+    height: 250px;
+    position: fixed;
+    top: calc(50% - 125px);
+    left: calc(50% - 200px);
+    text-align: center;
+}
+.login-box > .portrait {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50px;
+    box-shadow: 0 0 10px 5px #fff;
+    content: url("../img/index/portait.jpg");
+}
+
+.login-box > .login {
+    width: 255px;
+    height: 32px;
+    margin-top: 30px;
+    margin-left: 50px;
+    position: relative;
+}
+.login > input {
+    width: 200px;
+    height: 32px;
+    border: none;
+    box-shadow: 0 0 10px 2px #89b4d6 inset;
+    padding-left: 8px;
+}
+.login > span {
+    display: inline-block;
+    width: 50px;
+    height: 32px;
+    text-align: center;
+    background: #89b4d6;
+    color: #fff;
+    position: absolute;
+    font: normal 14px/32px "微软雅黑";
+    cursor: pointer;
+}
+.login-box p {
+    margin-top: 20px;
+    color: #fff;
+}
+
+
+/*************************************************/
+/* 动画帧定义部分 */
+/*************************************************/
+
+/*背景图片移动动画效果*/
+@keyframes float {
+    0% {
+        -webkit-transform: translate(0px,0px);
+        transform: translate(0px,0px);
+    }
+    25% {
+        -webkit-transform: translate(-100px,0px);
+        transform: translate(-100px,0px);
+    }
+    50% {
+        -webkit-transform: translate(-100px,-100px);
+        transform: translate(-100px,-100px);
+    }
+    75% {
+        -webkit-transform: translate(0px,-100px);
+        transform: translate(0px,-100px);
+    }
+    100% {
+        -webkit-transform: translate(0px,0px);
+        transform: translate(0px,0px);
+    }
+}
